@@ -1,0 +1,34 @@
+{
+  "MODE": "UART",
+
+  "GRID": {
+    "X": 6.0,
+    "Y": 6.0,
+    "Z": 3.0,
+    "STEP": 0.5
+  },
+
+  "UART": {
+    "SERIAL_PORT": "COM5",
+    "BAUDRATE": 115200
+  },
+
+  "WIFI": {
+    "HOST": "192.168.4.1",
+    "PORT": 3333
+  },
+
+  "CALIBRATION": {
+    "STANDING_Z": 1.0,
+    "SITTING_Z": 0.6,
+    "LYING_Z": 0.35
+  },
+
+  "DETECTION": {
+    "EPS": 0.55,
+    "MIN_SAMPLES": 5,
+    "HUMAN_CONF_THRESHOLD": 0.3,
+    "V_MOVE_THRESHOLD": 0.05,
+    "FALL_V_THRESHOLD": -0.3
+  }
+}
