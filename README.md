@@ -197,3 +197,6 @@ All detection parameters are configurable via `RADAR_CONFIG_DEFAULT()` in `main/
 | `Lowpower Task` | 4 KB | 5 | Power management monitor |
 | `alert_audio` | 4 KB | 5 | Transient — plays alert WAV |
 | `boot_audio` | 4 KB | 5 | Transient — plays boot WAV |
+
+## Build Flow
+<img width="1901" height="473" alt="BUILDFLOW" src="https://github.com/user-attachments/assets/edc6e8a8-bd4e-48cf-b486-b35f6ff7069a" />
