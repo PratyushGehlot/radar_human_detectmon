@@ -143,8 +143,6 @@ The app connects to `192.168.4.1:3333` and renders the point cloud with cluster 
 
 ## UI Screens
 
-| Screen | Description |
-|---|---|
 | Screen 1 | Boot splash with progress bar animation |
 <img width="513" height="454" alt="image" src="https://github.com/user-attachments/assets/65c29b7b-af1d-411f-a2fd-0fa33e5d724b" />
 
