@@ -143,19 +143,15 @@ The app connects to `192.168.4.1:3333` and renders the point cloud with cluster 
 
 ## UI Screens
 
+| Screen | Description |
+|---|---|
 | Screen 1 | Boot splash with progress bar animation |
-<img width="513" height="454" alt="image" src="https://github.com/user-attachments/assets/65c29b7b-af1d-411f-a2fd-0fa33e5d724b" />
-
 | Screen 2 | Settings — height, range, sensitivity sliders, audio alert toggle |
-<img width="518" height="454" alt="image" src="https://github.com/user-attachments/assets/2538e131-d343-4ad0-8e64-85d17b076c7a" />
-
 | Screen 3 | **Main monitor** — posture icon, detection status, fall/safe indicator |
-<img width="518" height="455" alt="image" src="https://github.com/user-attachments/assets/5a604ad6-2ffc-454b-9306-b36b5a1a3d2d" />
-
 | Screen 4 | Debug log — target coordinates, WiFi client IP |
-<img width="513" height="450" alt="image" src="https://github.com/user-attachments/assets/f908e96e-ec85-40b2-a2d1-d6ea9cc3fe86" />
 
-Navigate between screens by swiping left/right on the touchscreen.
+<img width="898" height="724" alt="2026-02-13_17h00_33" src="https://github.com/user-attachments/assets/0f2cc9a0-44f0-4e13-8af1-22332c07da11" />
+
 
 ## Configuration
 
