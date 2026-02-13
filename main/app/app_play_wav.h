@@ -1,3 +1,12 @@
+/**
+ * @file app_play_wav.h
+ * @brief Radar Human Detection & Fall Monitor
+ * @details ESP32-S3-BOX-3 based real-time human presence detection and fall
+ *          monitoring system using LD6001 mmWave radar sensor.
+ * @author PratyushGehlot
+ * @see https://github.com/PratyushGehlot/radar_human_detectmon
+ */
+
 /*
  * SPDX-FileCopyrightText: 2022 Espressif Systems (Shanghai) CO LTD
  *

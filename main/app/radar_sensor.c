@@ -1,3 +1,12 @@
+/**
+ * @file radar_sensor.c
+ * @brief Radar Human Detection & Fall Monitor
+ * @details ESP32-S3-BOX-3 based real-time human presence detection and fall
+ *          monitoring system using LD6001 mmWave radar sensor.
+ * @author PratyushGehlot
+ * @see https://github.com/PratyushGehlot/radar_human_detectmon
+ */
+
 /* 
    Radar sensor handling code for ESP32-S3 Box3 application.
    This module interfaces with the radar sensor over UART, processes the raw data to detect human presence and posture, 

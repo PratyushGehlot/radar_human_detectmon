@@ -1,3 +1,12 @@
+/**
+ * @file esp32s3_box3_appmain.c
+ * @brief Radar Human Detection & Fall Monitor
+ * @details ESP32-S3-BOX-3 based real-time human presence detection and fall
+ *          monitoring system using LD6001 mmWave radar sensor.
+ * @author PratyushGehlot
+ * @see https://github.com/PratyushGehlot/radar_human_detectmon
+ */
+
 /*
  * ESP32s3 Box3 App Main - Radar Human presense and fall detection for home safeety with Privecy protection.
  * This is the main application file for the ESP32s3 Box3, which initializes the system, mounts the SPIFFS file system, sets up the display and LVGL, and starts the main application loop. The application includes features such as radar-based human presence detection and fall detection for home safety, with a focus on privacy protection. The code is structured to ensure efficient use of resources and responsiveness of the user interface.

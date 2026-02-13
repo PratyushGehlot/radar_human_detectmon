@@ -1,6 +1,6 @@
 # Radar Human Detection & Fall Monitor
 
-An ESP32-S3-BOX-3 based real-time human presence detection and fall monitoring system using a ceiling-mounted **LD6001B mmWave radar sensor**. The system classifies human posture (standing, sitting, lying, sleeping) and detects falls with audio alerts — all without cameras, preserving privacy.
+An ESP32-S3-BOX-3 based real-time human presence detection and fall monitoring system using a ceiling-mounted **LD6001 mmWave radar sensor**. The system classifies human posture (standing, sitting, lying, sleeping) and detects falls with audio alerts — all without cameras, preserving privacy.
 
 ## Features
 
@@ -18,7 +18,7 @@ An ESP32-S3-BOX-3 based real-time human presence detection and fall monitoring s
 | Component | Model | Interface |
 |---|---|---|
 | MCU + Display | [ESP32-S3-BOX-3](https://github.com/espressif/esp-box) | — |
-| Radar Sensor | LD6001B mmWave | UART1 (TX: GPIO 38, RX: GPIO 39, 115200 baud) |
+| Radar Sensor | LD6001 mmWave | UART1 (TX: GPIO 38, RX: GPIO 39, 115200 baud) |
 | Audio Codec | ES8311 (built-in) | I2S + I2C |
 | Touch Panel | GT911 (built-in) | I2C |
 | Flash | 16 MB QIO | SPI |
@@ -82,8 +82,9 @@ radar_human_detectmon/
 │   ├── attention.wav               # Fall alert sound
 │   └── humanpresensedetected.wav   # Presence notification
 ├── pc_app/                         # PC companion tools
-│   ├── LD6001B_PC4.2_WIFI_V1.py   # 3D point cloud visualizer (WiFi)
-│   └── convert_audio_for_esp32s3.py
+│   ├── main.py    # 3D point cloud visualizer (Over WiFi/COM)
+│   ├── HumanRadar_PC_Visualizer.cp313-win_amd64.pyd #pc app library
+│   └── config.json					# GUI configuration
 ├── partitions.csv                  # Flash partition table (16 MB)
 ├── sdkconfig.defaults              # Default build configuration
 └── idf_component.yml               # Component manager dependencies
@@ -137,7 +138,7 @@ pip install matplotlib numpy
 
 # Run the visualizer
 cd pc_app
-python LD6001B_PC4.2_WIFI_V1.py
+main.py
 ```
 
 The app connects to `192.168.4.1:3333` and renders the point cloud with cluster labels and posture overlay.

@@ -1,3 +1,12 @@
+/**
+ * @file wifi_stream.c
+ * @brief Radar Human Detection & Fall Monitor
+ * @details ESP32-S3-BOX-3 based real-time human presence detection and fall
+ *          monitoring system using LD6001 mmWave radar sensor.
+ * @author PratyushGehlot
+ * @see https://github.com/PratyushGehlot/radar_human_detectmon
+ */
+
 #include "wifi_stream.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
