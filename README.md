@@ -52,14 +52,6 @@ UART RX → Point Filter → DBSCAN Cluster → Feature Extract → Posture Clas
 5. **Fall Detection** — 4-state FSM (NONE → SUSPECT → CONFIRMED → COOLDOWN) with multi-evidence scoring
 6. **Target Tracking** — Nearest-neighbor association + EMA smoothing (α=0.4) across frames
 
-### Fall Detection State Machine
-
-| Transition | Condition |
-|---|---|
-| NONE → SUSPECT | 2+ of: downward velocity, z-drop, acceleration spike, height collapse, posture transition |
-| SUSPECT → CONFIRMED | Evidence sustained for 2+ consecutive frames |
-| CONFIRMED → COOLDOWN | 5s hold time + 5 consecutive upright frames |
-| COOLDOWN → NONE | Upright posture detected |
 
 ## Project Structure
 
