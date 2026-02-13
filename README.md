@@ -2,6 +2,8 @@
 
 An ESP32-S3-BOX-3 based real-time human presence detection and fall monitoring system using a ceiling-mounted **LD6001 mmWave radar sensor**. The system classifies human posture (standing, sitting, lying, sleeping) and detects falls with audio alerts — all without cameras, preserving privacy.
 
+<img width="1181" height="724" alt="3d_point_cloud" src="https://github.com/user-attachments/assets/f42bbdeb-e5ca-42a0-b9d1-09aac4e541da" />
+
 ## Features
 
 - **Real-time posture classification** — Standing, Sitting, Lying, Sleeping
@@ -133,12 +135,8 @@ A Python companion app connects to the ESP32's WiFi AP to visualize the radar po
 # Connect your PC to the ESP32 WiFi AP
 # SSID: ESP32S3BOX3_RadarSensor
 
-# Install dependencies
-pip install matplotlib numpy
-
 # Run the visualizer
-cd pc_app
-main.py
+cd pc_app main.py
 ```
 
 The app connects to `192.168.4.1:3333` and renders the point cloud with cluster labels and posture overlay.
