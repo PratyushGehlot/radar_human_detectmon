@@ -2,6 +2,8 @@
 
 An ESP32-S3-BOX-3 based real-time human presence detection and fall monitoring system using a ceiling-mounted **LD6001 mmWave radar sensor**. The system classifies human posture (standing, sitting, lying, sleeping) and detects falls with audio alerts — all without cameras, preserving privacy.
 
+<img width="1181" height="724" alt="3d_point_cloud" src="https://github.com/user-attachments/assets/f42bbdeb-e5ca-42a0-b9d1-09aac4e541da" />
+
 ## Features
 
 - **Real-time posture classification** — Standing, Sitting, Lying, Sleeping
@@ -50,14 +52,6 @@ UART RX → Point Filter → DBSCAN Cluster → Feature Extract → Posture Clas
 5. **Fall Detection** — 4-state FSM (NONE → SUSPECT → CONFIRMED → COOLDOWN) with multi-evidence scoring
 6. **Target Tracking** — Nearest-neighbor association + EMA smoothing (α=0.4) across frames
 
-### Fall Detection State Machine
-
-| Transition | Condition |
-|---|---|
-| NONE → SUSPECT | 2+ of: downward velocity, z-drop, acceleration spike, height collapse, posture transition |
-| SUSPECT → CONFIRMED | Evidence sustained for 2+ consecutive frames |
-| CONFIRMED → COOLDOWN | 5s hold time + 5 consecutive upright frames |
-| COOLDOWN → NONE | Upright posture detected |
 
 ## Project Structure
 
@@ -133,12 +127,8 @@ A Python companion app connects to the ESP32's WiFi AP to visualize the radar po
 # Connect your PC to the ESP32 WiFi AP
 # SSID: ESP32S3BOX3_RadarSensor
 
-# Install dependencies
-pip install matplotlib numpy
-
 # Run the visualizer
-cd pc_app
-main.py
+cd pc_app main.py
 ```
 
 The app connects to `192.168.4.1:3333` and renders the point cloud with cluster labels and posture overlay.
@@ -152,7 +142,8 @@ The app connects to `192.168.4.1:3333` and renders the point cloud with cluster 
 | Screen 3 | **Main monitor** — posture icon, detection status, fall/safe indicator |
 | Screen 4 | Debug log — target coordinates, WiFi client IP |
 
-Navigate between screens by swiping left/right on the touchscreen.
+<img width="898" height="724" alt="2026-02-13_17h00_33" src="https://github.com/user-attachments/assets/0f2cc9a0-44f0-4e13-8af1-22332c07da11" />
+
 
 ## Configuration
 
@@ -199,6 +190,5 @@ All detection parameters are configurable via `RADAR_CONFIG_DEFAULT()` in `main/
 | `alert_audio` | 4 KB | 5 | Transient — plays alert WAV |
 | `boot_audio` | 4 KB | 5 | Transient — plays boot WAV |
 
-## License
-
-This project is provided as-is for educational and research purposes.
+## Build Flow
+<img width="1901" height="473" alt="BUILDFLOW" src="https://github.com/user-attachments/assets/edc6e8a8-bd4e-48cf-b486-b35f6ff7069a" />
